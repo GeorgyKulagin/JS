@@ -50,15 +50,120 @@
     // +prompt('Какой сейчас год?') === 2021 ? document.write('<h1>Вы были правы</h1>') : document.write('<h1>Проспитесь либо вы из прошлого или будущего</h1>');
 
     // Пример на ввод пароля:
-    let checkAdmin = confirm('Вы админ?'); //confirm откроет окошечко с вариантами да/нет При выборе Да вернеться-true при нет -false
-    if (checkAdmin) {
-        let password = prompt('Ввдите пароль');
-        password === 'ASh' ? alert('Пароль верен') : alert('Пароль не верный')
-    } else {
-        alert('Нечего вам тут делать!');
-    }
+    // let checkAdmin = confirm('Вы админ?'); //confirm откроет окошечко с вариантами да/нет При выборе Да вернеться-true при нет -false
+    // if (checkAdmin) {
+    //     let password = prompt('Ввдите пароль');
+    //     password === 'ASh' ? alert('Пароль верен') : alert('Пароль не верный')
+    // } else {
+    //     alert('Нечего вам тут делать!');
+    // }
+//  // 1 способ
+// let num = '122345';
+//     let lastDigit = num % 10; // 5
+//     let newNum = num - lastDigit;
+//     console.log(newNum); // 12340
+//     newNum /= 10; //1234
+//     console.log(String(lastDigit) + String(newNum));
+// // 2 способ
+//     let num = 12345;
+//     let lastDigit = num % 10; // 5
+//     let newNum = Math.trunc(num / 10);
+//     console.log(String(lastDigit) + String(newNum));
+//
+//     //3 способ
+//     let num = 12345;
+//     let = lastDigit = num % 10;
+//     num = num.slice(0, -1); // 1234
+//     console.log(String(lastDigit) + String(newNum));
+//  let a = 56;
+//  let b = 76;
+//     console.log('сумма = ${a + b}, Производная {a * b}');
+
+</script>
+
+<!--Блок 2 Логические операторы-->
+<script>
+  // логические или (||)  в классическом программировании работает следующим образом если хотя бы один из аргументов true
+  // то возращается true иначе - false в JavaScript как мы уидим далее это не совсем так но для начала рассмотрим только
+  // логические знания
+  //true || true // true
+  //false || true // true
+  //true || false // true
+  //false || false // false
+
+  // Короткий цикал вычсления выполняется слева на право
+  // let x;
+  // true || (x = 1);
+  // alert(x); // undefined x не присвоен
+  //  в примере нижу первый аргумент - false так что ИЛИ попытается вычислить второй запустив тем самым присваивание
+  // let x;
+  // false || (x = 1);
+  // alert(x); // 1
+
+  // && (и)
+  // true && true // true
+  // false && true // false
+  // true && false // false
+  // false && false // false
+
+  // let hour= 12 , minute = 30;
+  // if (hour === 12 && minute ===30){
+  //alert('Время 12:30');}
+
+  //Перый аргумент - false
+  // Он и возращается а второй аргумент игнорируется
+  // alert (null && 5) ; // null
+  // alert ( 0 && "не важно"); // 0
+
+  // Можно передать и несколько значений подрят при этом возратиться первое ложное на котьором оставились вычисления а если его нет то последние
+  // alert (1 && 2 && null && 3); // null
+  // alert (1 && 2 && 3); // 3
+
+  // Приоритет у && больше чем у ||
+
+  // !(не)
+  //let result = !value
+  // Действеи !
+  //Сначала приводит аргумент к логическому типу true / false Затем возращает противоположное значение например
+  // alert (!true); // false
+  // alert (!0); // true
+
+  // В частности двойное НЕ используют для преобразования значений к логическому типу
+  // alert (!!"строка"); // true
+  // alert (!!null); // false
+
+//1)
+//   let age = +prompt('Ведите возрост');
+//   if (age >=14 && age <=90){
+//       console.log('Проходит')
+//   } else {
+//       console.log('Не проходит')
+//   };
+//   //2)
+//   if (!(age >= 14 && age <= 90)){
+//       console.log('Проходит')
+//   } else {
+//       console.log('Не проходит')
+//   };
+//   if (age < 14 || age > 90){
+//       console.log('Проходит')
+//   } else {
+//       console.log('Не проходит')
+//   };
 
 
+
+  //Non-null assertion operator
+  //null && true; // null
+  //null || true; // true
+  // null ?? true; // true
+  //Non-null assertion
+  let a = null;
+  let b = "";
+  let c = 42;
+  console.log(a ?? "default a"); //default a
+  console.log(a ?? "default b"); // "" (так как пустая строка не null или undefined)
+  console.log(c ?? 42); // 42
 </script>
 </body>
 </html>
