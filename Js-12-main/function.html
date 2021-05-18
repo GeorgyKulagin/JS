@@ -80,25 +80,111 @@
 
 <!--Блок 3 Пример задач-->
 <script>
-    // Задача 1 Создать функцию которая вернет сумму чисел от 1 до введенного пользователем включительно
-    function f(num, num2) {
-        let sum = 0;
-        for (; num <= num2; num++){
-            sum += num;
-        }
-        return sum;
+    // // Задача 1 Создать функцию которая вернет сумму чисел от 1 до введенного пользователем включительно
+    // function f(num, num2) {
+    //     let sum = 0;
+    //     for (; num <= num2; num++){
+    //         sum += num;
+    //     }
+    //     return sum;
+    // }
+    // let num = +prompt('Введтите число 1 число');
+    // let num2 = +prompt('Введтите число 2 число')
+    // let result = f(num, num2);
+    // alert(`Результат суммы чисел = ${result}`);
+
+
+
+
+// Завдача 2 Создать функцию которая будет создавать массив чисел размерностью заданной пользователем и выводить значения в этот массив Функция должна явернуть введенный массив
+
+    // function createArray(len) {
+    //     let userArray = [];
+    //     for(let i = 0; i < len; i++) {
+    //         // Метод Array.push() добовляет элемент/ы в конец массива
+    //         // Метод в отличии от функции вызывается для объекта через точку и имеет круглые скобки для передачи аргумента
+    //         // Синтаксис : Object.method(args)
+    //         userArray.push(prompt('Введите элемент массива'));
+    //     }
+    //     return userArray;
+    // }
+    //
+    // let _length = +prompt('Введите длину массива');
+    // let result = createArray(_length);
+    // console.log(result); // выведем массив возвращаемый функцией
+
+
+    // Задача 3 Создать функцию получающую два числовых значения и возращающую true если первое число больше второго и false в ином случае(меньше или равно)
+
+    // function f(num, num1) {
+        //     // 1 Вариант менее рациональный вариант
+        //     if(num > num1) {
+        //         return true;
+        //     }
+        //     else {
+        //         return false;
+        //     }
+        //     return f;
+        //}
+        // 2 Вариант чуть более рационнаяльный
+        // return a > b ? true : false;
+
+        // 3 Вариант самый рационнальный
+        // return a > b;
     }
-    let num = +prompt('Введтите число 1 число');
-    let num2 = +prompt('Введтите число 2 число')
-    let result = f(num, num2);
-    alert(`Результат суммы чисел = ${result}`);
-
-
+    // let num = +prompt('Введите число');
+    // let num1 = +prompt('Введите число');
+    // let result = f(num, num1);
+    // alert(result);
 </script>
 
+<!-- Блок 4 Циклы for...of, for...in и функции-->
+<script>
+    // Цикл for... of используется для перебора итерируемых объектов массивов
 
+    // Отличие for...of от цикла for
+    // Задача перебор массива и увеличение каждого элемента в два раза
 
+    // СПОСОБ РЕШЕНИЯ ЧЕРЕЗ ЦИКЛ FOR
+    // function enumArrayFor(ar){
+    //     // ДЛЯ ПОЛУЧЕНИЯ ДЛИНЫ МАССИВА ИСПОЛЬЗУЕТСЯ СВОЙСТВО LENGTH (ДЛИНА)
+    //     // СВОЙСТВО ВЫЗЫВАЕТСЯ КАК И МЕТОД ТОЛЬКО БЕЗ КРУГЛЫХ СКОБОК
+    //     let resultArrey = [];
+    //     for (let i = 0; i < ar.length ; i++){
+    //         resultArrey.push(ar[i] * 2)
+    //     }
+    //     return resultArrey;
+    // }
+    // // СПОСОБ РЕШЕНИЯ ЧЕРЕЗ ЦИКЛ FOR OF
+    // function enumArrayForOf(ar) {
+    //     let resultArray = [];
+    //     for (let i of ar) {
+    //         resultArray.push(i * 2);
+    //     }
+    //     return resultArray;
+    // }
+    //
+    //
+    // const numberArray = [54, 532, 24.2, 45, 85];
+    // const resultFor = enumArrayFor(numberArray);
+    // const resultForOf = enumArrayForOf(numberArray);
+    // console.log('resultFor', resultFor);
+    // console.log('resultForOf', resultForOf);
 
-
+    // FOR...IN - ИСПОЛЬЗУЕТСЯ ДЛЯ ПЕРЕБОРА ИТЕРИРУЕМЫХ ОБЪЕКТОВ
+    // НЕ ЖИЛАТИЛЬНО ИСПОЛЬЗОВАТЬ ДЛЯ ПЕРЕБОРА МАССИВОВ ИБО НЕ БУДЕТ ГАРАНТИРОВАНА ПРАВИЛЬНАЯ ПОСЛЕДСТВЕНОСТЬ ПЕРЕБОРА
+    // получите все значения свойств объекта и его значений
+    // внутри объекта {} мы указываем "ключ": "значения"
+    // const userObject = {
+    //     "phone": "54623164564",
+    //     "name": "Kulagin",
+    //     "age": 23,
+    //     "length": 182
+    // }
+    // for (let i in userObject) {
+    //     userObject.phone = "5545454546";// изменить значения в объяете по ключу phone!!!!!!!
+    //     console.log(`Ключ(свойство) ${i}: Значения ${userObject[i]}`)
+    // }
+</script>
 </body>
 </html>
